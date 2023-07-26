@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -19,7 +22,7 @@
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 149, 13%, 52%, 1;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -28,12 +31,26 @@
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
+    --header: 149, 13%, 52%, 0.8;
+    --header-foreground: 0 0% 100%;
+
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;
 
     --ring: 215 20.2% 65.1%;
 
     --radius: 0.5rem;
+
+    --xspace: 10%
+
+    /* Swiper custom properties */
+    --swiper-navigation-color: hsla(0, 0%, 100%, 0.53);
+    --swiper-navigation-sides-offset: 2.5rem;
+    --swiper-navigation-size: 2rem !important;
+
+    --swiper-pagination-color: hsla(0, 0%, 100%, 0.6);
+    --swiper-pagination-bullet-inactive-color: hsla(0, 0%, 56%, 0.85);
+    --swiper-pagination-bullet-inactive-opacity: 0.9;
   }
 
   .dark {
@@ -61,6 +78,9 @@
     --secondary: 222.2 47.4% 11.2%;
     --secondary-foreground: 210 40% 98%;
 
+    --header: 149, 13%, 52%, 1;
+    --header-foreground: 0 0% 100%;
+
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
@@ -74,8 +94,22 @@
   * {
     @apply border-border;
   }
+  html {
+    font-family: nunito, sans-serif;
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  /* Hide the scrollbar for Chrome */
+  body::-webkit-scrollbar {
+    width: 0.75em;
+  }
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 0.25em;
   }
 }

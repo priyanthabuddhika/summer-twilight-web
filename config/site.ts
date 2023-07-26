@@ -1,13 +1,33 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "Summer Twillight",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    ".",
   mainNav: [
     {
       title: "Home",
       href: "/",
+    },
+    {
+      title: "About Us",
+      href: "/about-us",
+    },
+    {
+      title: "Services",
+      href: "/services",
+    },
+    {
+      title: "Packages",
+      href: "/packages",
+    },
+    {
+      title: "Portfolio",
+      href: "/portfolio",
+    },
+    {
+      title: "Contact Us",
+      href: "/contact-us",
     },
   ],
   links: {

@@ -1,24 +1,31 @@
+"use client"
+
 import * as React from "react"
 import Link from "next/link"
-
+import { usePathname } from "next/navigation"
+import { Button } from "@/components/ui/button"
 import { NavItem } from "@/types/nav"
-import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
 
 interface MainNavProps {
   items?: NavItem[]
 }
 
 export function MainNav({ items }: MainNavProps) {
+  const pathname = usePathname()
+
   return (
-    <div className="flex gap-6 md:gap-10">
+    <div className="flex items-center justify-between gap-6 md:gap-10 w-full">
       <Link href="/" className="flex items-center space-x-2">
-        <Icons.logo className="h-6 w-6" />
-        <span className="inline-block font-bold">{siteConfig.name}</span>
+        <div className="text-center text-white font-normal font-['marcellus'] capitalize leading-snug">
+          Summer
+          <br />
+          Twilight
+        </div>
       </Link>
+      <div>
       {items?.length ? (
-        <nav className="flex gap-6">
+        <nav className="flex h-full gap-6">
           {items?.map(
             (item, index) =>
               item.href && (
@@ -26,7 +33,8 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center text-sm font-medium text-muted-foreground",
+                    "flex items-center text-sm text-header-foreground h-16",
+                    pathname === item.href && "border-b-2 border-white",
                     item.disabled && "cursor-not-allowed opacity-80"
                   )}
                 >
@@ -36,6 +44,8 @@ export function MainNav({ items }: MainNavProps) {
           )}
         </nav>
       ) : null}
+      </div>
+      <Button variant="header" size="lgr">Request a quote</Button>
     </div>
   )
 }

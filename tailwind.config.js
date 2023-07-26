@@ -5,9 +5,13 @@ module.exports = {
   darkMode: ["class"],
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
+    fontFamily: {
+      'nunito': ['nunito', 'sans-serif'],
+      'marcellus': ['Marcellus', 'serif']
+    },
     container: {
       center: true,
-      padding: "2rem",
+      padding: "10%",
       screens: {
         "2xl": "1400px",
       },
@@ -47,6 +51,10 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        header: {
+          DEFAULT: "hsl(var(--header))",
+          foreground: "hsl(var(--header-foreground))",
+        }
       },
       borderRadius: {
         lg: `var(--radius)`,
