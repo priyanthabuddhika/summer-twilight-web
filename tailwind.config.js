@@ -6,7 +6,8 @@ module.exports = {
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
     fontFamily: {
-      'nunito': ['nunito', 'sans-serif'],
+      'dmsans': ['DM Sans', 'sans-serif'],
+      'dmserif': ['DM Serif Display', 'serif'],
       'marcellus': ['Marcellus', 'serif']
     },
     container: {

@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+    --foreground: 0, 0%, 49%, 1;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -93,11 +94,17 @@
     @apply border-border;
   }
   html {
-    font-family: nunito, sans-serif;
+    font-family: 'DM Sans', sans-serif;
   }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+  }
+  p {
+    color: hsla(0, 0%, 49%, 1);
   }
   /* Hide the scrollbar for Chrome */
   body::-webkit-scrollbar {
