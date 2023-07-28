@@ -24,9 +24,9 @@
     --card-foreground: 222.2 47.4% 11.2%;
 
     --primary: 149, 13%, 52%, 1;
-    --primary-foreground: 210 40% 98%;
+    --primary-foreground:  0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 45, 22%, 96%, 0.95;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --accent: 210 40% 96.1%;
@@ -51,42 +51,6 @@
     --swiper-pagination-bullet-inactive-color: hsla(0, 0%, 56%, 0.85);
     --swiper-pagination-bullet-inactive-opacity: 0.9;
   }
-
-  .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
-
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
-
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
-
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
-
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
-
-    --card: 224 71% 4%;
-    --card-foreground: 213 31% 91%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
-
-    --secondary: 222.2 47.4% 11.2%;
-    --secondary-foreground: 210 40% 98%;
-
-    --header: 149, 13%, 52%, 1;
-    --header-foreground: 0 0% 100%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 216 34% 17%;
-
-    --radius: 0.5rem;
-  }
 }
 
 @layer base {
@@ -100,12 +64,10 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  h1 {
+  h1, h2 {
+    @apply text-primary;
     font-family: 'DM Serif Display', serif;
-  }
-  p {
-    color: hsla(0, 0%, 49%, 1);
-  }
+  }  
   /* Hide the scrollbar for Chrome */
   body::-webkit-scrollbar {
     width: 0.75em;
