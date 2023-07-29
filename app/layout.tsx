@@ -1,4 +1,5 @@
 import "@/styles/globals.css"
+
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
@@ -43,9 +44,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative -top-20 min-h-screen ">
+            <div className=" min-h-screen ">
               <SiteHeader />
-              <div >{children}</div>
+              <div>{children}</div>
             </div>
             <TailwindIndicator />
           </ThemeProvider>

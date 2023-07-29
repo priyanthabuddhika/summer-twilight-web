@@ -15,7 +15,7 @@ export function MainNav({ items }: MainNavProps) {
   const pathname = usePathname()
 
   return (
-    <div className="flex items-center justify-between gap-6 md:gap-10 w-full">
+    <div className="flex items-center justify-between gap-6 md:gap-10 w-full h-16">
       <Link href="/" className="flex items-center space-x-2">
         <div className="text-center text-white font-normal font-['marcellus'] capitalize leading-snug">
           Summer
@@ -23,7 +23,7 @@ export function MainNav({ items }: MainNavProps) {
           Twilight
         </div>
       </Link>
-      <div>
+      <div className="hidden md:block">
       {items?.length ? (
         <nav className="flex h-full gap-6">
           {items?.map(
