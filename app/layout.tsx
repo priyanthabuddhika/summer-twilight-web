@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className=" min-h-screen ">
               <SiteHeader />
               <div>{children}</div>
+              <Footer />
             </div>
             <TailwindIndicator />
           </ThemeProvider>
