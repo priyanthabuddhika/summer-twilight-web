@@ -54,7 +54,7 @@ export default function IndexPage() {
       </section>
       <section
         id="services"
-        className="w-full h-full bg-[url('/images/slider-2.png')] bg-fixed bg-center"
+        className="w-full h-full bg-[url('/images/home/services/bg.png')] bg-fixed bg-center"
       >
         <div className="bg-secondary py-8 md:py-12 lg:py-24 ">
           <div className="container space-y-8 text-center">
@@ -148,7 +148,7 @@ export default function IndexPage() {
           <h1 className="mb-16 lg:mb-24 scroll-m-20 font-bold tracking-tight text-4xl lg:text-5xl">
             Testimonials
           </h1>
-          <div className="w-full h-full bg-[url('/images/slider-2.png')] bg-fixed bg-center">
+          <div className="w-full h-full bg-[url('/images/home/testimonials/bg.png')] bg-fixed bg-center">
             <div className="bg-secondary">
               <div className="container md:flex">
                 <div className="md:w-1/2">

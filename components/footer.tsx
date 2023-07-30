@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <section
     id="footer"
-    className="w-full h-full bg-[url('/images/slider-2.png')] bg-center"
+    className="w-full h-full bg-[url('/images/footer/bg.png')] bg-center"
   >
     <div className="bg-primary opacity-[88%] py-12 lg:py-20 ">
       <div className="container text-primary-foreground text-center md:flex gap-6 justify-between">
