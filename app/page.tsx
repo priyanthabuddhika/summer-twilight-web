@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import { cn } from "@/lib/utils"
 import Carousel from "@/components/carousel"
 import { Icons } from "@/components/icons"
@@ -42,14 +44,17 @@ export default function IndexPage() {
             day. Let us help you tell your love story and create memories that
             will last a lifetime.
           </p>
-          <p className="inline-block text-primary text-base border-b hover:border-b-2 border-primary font-normal leading-none tracking-widest pb-2 cursor-pointer">
+          <Link
+            href={"/about-us"}
+            className="inline-block text-primary text-base border-b hover:border-b-2 border-primary font-normal leading-none tracking-widest pb-2 cursor-pointer"
+          >
             More About Us
-          </p>
+          </Link>
         </div>
       </section>
       <section
         id="services"
-        className="w-full h-full bg-[url('/images/slider-2.png')] bg-center"
+        className="w-full h-full bg-[url('/images/slider-2.png')] bg-fixed bg-center"
       >
         <div className="bg-secondary py-8 md:py-12 lg:py-24 ">
           <div className="container space-y-8 text-center">
@@ -93,9 +98,12 @@ export default function IndexPage() {
                 )
               })}
             </div>
-            <p className="inline-block text-primary text-base border-b hover:border-b-2 border-primary font-normal leading-none tracking-widest pb-2 cursor-pointer">
+            <Link
+              href={"/services"}
+              className="inline-block text-primary text-base border-b hover:border-b-2 border-primary font-normal leading-none tracking-widest pb-2 cursor-pointer"
+            >
               Learn More
-            </p>
+            </Link>
           </div>
         </div>
       </section>
@@ -110,7 +118,7 @@ export default function IndexPage() {
               is exciting. After all, you are spending way more than you
               normally would on a dress.
             </p>
-            <div className="flex gap-5 md:gap-10 md:justify-center max-lg:mt-8 justify-between">
+            <div className="flex gap-5 sm:gap-10 sm:justify-center max-lg:mt-8 justify-between">
               <p className="border-b-2 border-primary cursor-pointer">
                 Weddings
               </p>
@@ -123,31 +131,34 @@ export default function IndexPage() {
             </div>
           </div>
           <div className="md:grid md:gap-5 md:grid-cols-3 max-md:space-y-5">
-            <img src="/images/home/work/1.jpg" alt="" />
-            <img src="/images/home/work/2.jpg" alt="" />
-            <img src="/images/home/work/3.jpg" alt="" />
+            <img className="rounded" src="/images/home/work/1.jpg" alt="" />
+            <img className="rounded" src="/images/home/work/2.jpg" alt="" />
+            <img className="rounded" src="/images/home/work/3.jpg" alt="" />
           </div>
-          <p className="inline-block text-primary text-base border-b hover:border-b-2 border-primary font-normal leading-none tracking-widest pb-2 cursor-pointer">
+          <Link
+            href={"/portfolio"}
+            className="inline-block text-primary text-base border-b hover:border-b-2 border-primary font-normal leading-none tracking-widest pb-2 cursor-pointer"
+          >
             Check Our Portfolio
-          </p>
+          </Link>
         </div>
       </section>
       <section id="testimonials" className="py-8 md:py-12 lg:py-24">
         <div className="space-y-8 text-center">
-          <h1 className="scroll-m-20 font-bold tracking-tight text-4xl lg:text-5xl">
+          <h1 className="mb-16 lg:mb-24 scroll-m-20 font-bold tracking-tight text-4xl lg:text-5xl">
             Testimonials
           </h1>
-          <div className="w-full h-full bg-[url('/images/slider-2.png')] bg-center">
+          <div className="w-full h-full bg-[url('/images/slider-2.png')] bg-fixed bg-center">
             <div className="bg-secondary">
-              <div className="container flex">
+              <div className="container md:flex">
                 <div className="md:w-1/2">
                   <img
-                    className="w-9/12"
+                    className="-translate-y-12 mx-auto w-3/4 md:w-9/12 rounded "
                     src="/images/home/testimonials/1.png"
                     alt=""
                   />
                 </div>
-                <div className="md:w-1/2 h-full my-auto space-y-8">
+                <div className="md:w-1/2 h-full my-auto space-y-8 max-md:pb-16">
                   <img
                     className="mx-auto"
                     src="/images/home/testimonials/quotes.svg"
@@ -189,11 +200,35 @@ export default function IndexPage() {
             exciting. After all, you are spending way more than you normally
             would on a dress.
           </p>
-          <div className="md:grid md:grid-cols-4 md:gap-5 max-md:space-y-5">
-            <img src="/images/home/work/1.jpg" alt="" />
-            <img src="/images/home/work/2.jpg" alt="" />
-            <img src="/images/home/work/3.jpg" alt="" />
-            <img src="/images/home/work/1.jpg" alt="" />
+          <div className="md:grid lg:grid-cols-4 md:grid-cols-2 md:gap-5 max-md:space-y-5">
+            <div className="relative">
+              <img className="rounded" src="/images/home/albums/1.png" alt="" />
+              <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
+                Mewni & Sanjay
+              </p>
+              <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-neutral-900 from-10% to-transparent rounded-bl rounded-br"></div>
+            </div>
+            <div className="relative">
+              <img className="rounded" src="/images/home/albums/2.png" alt="" />
+              <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
+                Primashi & Naveen
+              </p>
+              <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-neutral-900 from-10% to-transparent rounded-bl rounded-br"></div>
+            </div>
+            <div className="relative">
+              <img className="rounded" src="/images/home/albums/3.png" alt="" />
+              <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
+                Nimesha & Mithun
+              </p>
+              <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-neutral-900 from-10% to-transparent rounded-bl rounded-br"></div>
+            </div>
+            <div className="relative">
+              <img className="rounded" src="/images/home/albums/4.png" alt="" />
+              <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
+                Ishara & Praneed
+              </p>
+              <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-neutral-900 from-10% to-transparent rounded-bl rounded-br"></div>
+            </div>
           </div>
         </div>
       </section>
