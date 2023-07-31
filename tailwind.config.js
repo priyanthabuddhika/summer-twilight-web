@@ -55,6 +55,7 @@ module.exports = {
         header: {
           DEFAULT: "hsl(var(--header))",
           foreground: "hsl(var(--header-foreground))",
+          border: "hsl(var(--header-border))"
         }
       },
       borderRadius: {

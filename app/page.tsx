@@ -18,7 +18,7 @@ const homeServices = [
       "I am dedicated to celebrating your story; the one that is worth.",
   },
   {
-    img: "/images/home/services/1.png",
+    img: "/images/home/services/3.svg",
     title: "Casual Shots",
     description:
       "I am dedicated to celebrating your story; the one that is worth.",

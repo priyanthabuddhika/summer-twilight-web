@@ -15,13 +15,9 @@ export function MainNav({ items }: MainNavProps) {
   const pathname = usePathname()
 
   return (
-    <div className="flex items-center justify-between gap-6 md:gap-10 w-full h-16">
-      <Link href="/" className="flex items-center space-x-2">
-        <div className="text-center text-white font-normal font-['marcellus'] capitalize leading-snug">
-          Summer
-          <br />
-          Twilight
-        </div>
+    <div className="flex items-center justify-between gap-6 md:gap-10 w-full h-20">
+      <Link href="/" className="h-12">
+       <img src="/images/logo.svg" alt="" className="h-full" />
       </Link>
       <div className="hidden md:block">
       {items?.length ? (
@@ -33,8 +29,8 @@ export function MainNav({ items }: MainNavProps) {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center text-sm text-header-foreground h-16 hover:border-b-2 hover:border-white",
-                    pathname === item.href && "border-b-2 border-white",
+                    "flex items-center text-sm text-header-foreground h-20 box-border hover:border-b-4 hover:border-header-border",
+                    pathname === item.href && "border-b-2 border-header-border ",
                     item.disabled && "cursor-not-allowed opacity-80"
                   )}
                 >

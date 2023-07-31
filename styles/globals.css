@@ -23,7 +23,7 @@
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
 
-    --primary: 149, 13%, 52%, 1;
+    --primary: 274, 13%, 37%, 1;
     --primary-foreground:  0 0% 100%;
 
     --secondary: 45, 22%, 96%, 0.95;
@@ -32,8 +32,10 @@
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
-    --header: 149, 13%, 52%, 0.85;
+    --header: 274, 13%, 37%, 0.85;
     --header-foreground: 0 0% 100%;
+    --header-border: 0, 0%, 100%, 0.53;
+
 
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;

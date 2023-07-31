@@ -10,7 +10,7 @@ import "swiper/css/pagination"
 export default function Carousel() {
   return (
     <Swiper
-      className="w-full max-h-[105vh] "
+      className="w-full max-h-[100vh] "
       navigation={true}
       speed={1000}
       pagination={{
