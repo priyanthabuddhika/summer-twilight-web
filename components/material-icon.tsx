@@ -3,6 +3,10 @@ export type MtIcon =
   | "call"
   | "location_on"
   | "schedule"
+  | "close"
+  | "menu"
+  | "west"
+  | "east"
   
 /**
  * Reusable React component that displays Material icons.

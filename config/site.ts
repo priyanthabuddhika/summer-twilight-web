@@ -18,10 +18,6 @@ export const siteConfig = {
       href: "/services",
     },
     {
-      title: "Packages",
-      href: "/packages",
-    },
-    {
       title: "Portfolio",
       href: "/portfolio",
     },
