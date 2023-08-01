@@ -33,7 +33,7 @@ export default function IndexPage() {
       </section>
       <section id="abstract" className="py-8 md:py-12 lg:py-24">
         <div className="container space-y-8 text-center">
-          <h1 className="scroll-m-20 font-bold tracking-tight text-4xl lg:text-5xl">
+          <h1 className="scroll-m-20 font-normal tracking-tight text-4xl lg:text-5xl">
             Summer Twilight
           </h1>
           <p className="text-center text-base font-normal leading-7 ">
@@ -58,7 +58,7 @@ export default function IndexPage() {
       >
         <div className="bg-secondary py-8 md:py-12 lg:py-24 ">
           <div className="container space-y-8 text-center">
-            <h1 className="scroll-m-20 font-bold tracking-tight text-4xl lg:text-5xl">
+            <h1 className="scroll-m-20 font-normal tracking-tight text-4xl lg:text-5xl">
               Our Services
             </h1>
             <div className="flex justify-center">
@@ -87,7 +87,7 @@ export default function IndexPage() {
                     />
                     <h2
                       className={cn(
-                        "text-3xl leading-9 font-semibold",
+                        "text-3xl leading-9 font-normal",
                         index === 2 ? "text-primary-foreground" : ""
                       )}
                     >
@@ -109,7 +109,7 @@ export default function IndexPage() {
       </section>
       <section id="work" className="py-8 md:py-12 lg:py-24">
         <div className="container space-y-8 text-center">
-          <h1 className="scroll-m-20 font-bold tracking-tight text-4xl lg:text-5xl lg:text-left">
+          <h1 className="scroll-m-20 font-normal tracking-tight text-4xl lg:text-5xl lg:text-left">
             Our Work
           </h1>
           <div className="lg:flex lg:justify-between lg:items-center">
@@ -145,7 +145,7 @@ export default function IndexPage() {
       </section>
       <section id="testimonials" className="py-8 md:py-12 lg:py-24">
         <div className="space-y-8 text-center">
-          <h1 className="mb-16 lg:mb-24 scroll-m-20 font-bold tracking-tight text-4xl lg:text-5xl">
+          <h1 className="mb-16 lg:mb-24 scroll-m-20 font-normal tracking-tight text-4xl lg:text-5xl">
             Testimonials
           </h1>
           <div className="w-full h-full bg-[url('/images/home/testimonials/bg.png')] bg-fixed bg-center">
@@ -164,7 +164,7 @@ export default function IndexPage() {
                     src="/images/home/testimonials/quotes.svg"
                     alt=""
                   />
-                  <h2 className={cn("text-3xl leading-9 font-semibold")}>
+                  <h2 className={cn("text-3xl leading-9 font-normal")}>
                     Mewni & Sanjay
                   </h2>
                   <p className="font-dmserif italic font-normal text-lg">
@@ -192,7 +192,7 @@ export default function IndexPage() {
       </section>
       <section id="albums" className="py-8 md:py-12 lg:py-24">
         <div className="container space-y-8 text-center">
-          <h1 className="scroll-m-20 font-bold tracking-tight text-4xl lg:text-5xl md:text-left">
+          <h1 className="scroll-m-20 font-normal tracking-tight text-4xl lg:text-5xl md:text-left">
             Recent Albums
           </h1>
           <p className="md:text-left text-base font-normal leading-7">
