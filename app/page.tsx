@@ -74,7 +74,7 @@ export default function IndexPage() {
                   <div
                     key={item.title}
                     className={cn(
-                      "py-24 px-8 space-y-6 w-full md:w-1/2 lg:w-1/3 ",
+                      "py-24 px-8 space-y-6 w-full md:w-1/2 lg:w-1/3 rounded-xl",
                       index === 2
                         ? "bg-primary text-primary-foreground"
                         : "bg-background"
@@ -131,9 +131,24 @@ export default function IndexPage() {
             </div>
           </div>
           <div className="md:grid md:gap-5 md:grid-cols-3 max-md:space-y-5">
-            <img className="rounded" src="/images/home/work/1.jpg" alt="" loading="lazy"/>
-            <img className="rounded" src="/images/home/work/2.jpg" alt="" loading="lazy"/>
-            <img className="rounded" src="/images/home/work/3.jpg" alt="" loading="lazy"/>
+            <img
+              className="rounded-xl"
+              src="/images/home/work/1.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              className="rounded-xl"
+              src="/images/home/work/2.jpg"
+              alt=""
+              loading="lazy"
+            />
+            <img
+              className="rounded-xl"
+              src="/images/home/work/3.jpg"
+              alt=""
+              loading="lazy"
+            />
           </div>
           <Link
             href={"/portfolio"}
@@ -153,7 +168,7 @@ export default function IndexPage() {
               <div className="container md:flex">
                 <div className="md:w-1/2">
                   <img
-                    className="-translate-y-12 mx-auto w-3/4 md:w-9/12 rounded "
+                    className="-translate-y-12 mx-auto w-3/4 md:w-9/12 rounded-xl "
                     src="/images/home/testimonials/1.png"
                     alt=""
                     loading="lazy"
@@ -204,28 +219,48 @@ export default function IndexPage() {
           </p>
           <div className="md:grid lg:grid-cols-4 md:grid-cols-2 md:gap-5 max-md:space-y-5">
             <div className="relative">
-              <img className="rounded" src="/images/home/albums/1.png" alt="" loading="lazy"/>
+              <img
+                className="rounded"
+                src="/images/home/albums/1.png"
+                alt=""
+                loading="lazy"
+              />
               <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
                 Mewni & Sanjay
               </p>
               <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-neutral-900 from-10% to-transparent rounded-bl rounded-br"></div>
             </div>
             <div className="relative">
-              <img className="rounded" src="/images/home/albums/2.png" alt="" loading="lazy"/>
+              <img
+                className="rounded"
+                src="/images/home/albums/2.png"
+                alt=""
+                loading="lazy"
+              />
               <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
                 Primashi & Naveen
               </p>
               <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-neutral-900 from-10% to-transparent rounded-bl rounded-br"></div>
             </div>
             <div className="relative">
-              <img className="rounded" src="/images/home/albums/3.png" alt="" loading="lazy" />
+              <img
+                className="rounded"
+                src="/images/home/albums/3.png"
+                alt=""
+                loading="lazy"
+              />
               <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
                 Nimesha & Mithun
               </p>
               <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-neutral-900 from-10% to-transparent rounded-bl rounded-br"></div>
             </div>
             <div className="relative">
-              <img className="rounded" src="/images/home/albums/4.png" alt="" loading="lazy" />
+              <img
+                className="rounded"
+                src="/images/home/albums/4.png"
+                alt=""
+                loading="lazy"
+              />
               <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
                 Ishara & Praneed
               </p>
