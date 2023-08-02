@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import Carousel from "@/components/carousel"
-import { Icons } from "@/components/icons"
+import MaterialIcon from "@/components/material-icon"
 
 const homeServices = [
   {
@@ -131,9 +131,9 @@ export default function IndexPage() {
             </div>
           </div>
           <div className="md:grid md:gap-5 md:grid-cols-3 max-md:space-y-5">
-            <img className="rounded" src="/images/home/work/1.jpg" alt="" />
-            <img className="rounded" src="/images/home/work/2.jpg" alt="" />
-            <img className="rounded" src="/images/home/work/3.jpg" alt="" />
+            <img className="rounded" src="/images/home/work/1.jpg" alt="" loading="lazy"/>
+            <img className="rounded" src="/images/home/work/2.jpg" alt="" loading="lazy"/>
+            <img className="rounded" src="/images/home/work/3.jpg" alt="" loading="lazy"/>
           </div>
           <Link
             href={"/portfolio"}
@@ -156,6 +156,7 @@ export default function IndexPage() {
                     className="-translate-y-12 mx-auto w-3/4 md:w-9/12 rounded "
                     src="/images/home/testimonials/1.png"
                     alt=""
+                    loading="lazy"
                   />
                 </div>
                 <div className="md:w-1/2 h-full my-auto space-y-8 max-md:pb-16">
@@ -163,6 +164,7 @@ export default function IndexPage() {
                     className="mx-auto"
                     src="/images/home/testimonials/quotes.svg"
                     alt=""
+                    loading="lazy"
                   />
                   <h2 className={cn("text-3xl leading-9 font-normal")}>
                     Mewni & Sanjay
@@ -173,15 +175,15 @@ export default function IndexPage() {
                     ranch looks like something out of a movie.
                   </p>
                   <div className="flex gap-12 justify-center">
-                    <Icons.moveLeft
-                      strokeWidth={1}
+                    <MaterialIcon
+                      icon="west"
                       color="#1C1B1F"
-                      className="cursor-pointer rotate-0 scale-100 transition-all"
+                      className="cursor-pointer"
                     />
-                    <Icons.moveRight
-                      strokeWidth={1}
+                    <MaterialIcon
+                      icon="east"
                       color="#1C1B1F"
-                      className="cursor-pointer rotate-0 scale-100 transition-all"
+                      className="cursor-pointer"
                     />
                   </div>
                 </div>
@@ -202,28 +204,28 @@ export default function IndexPage() {
           </p>
           <div className="md:grid lg:grid-cols-4 md:grid-cols-2 md:gap-5 max-md:space-y-5">
             <div className="relative">
-              <img className="rounded" src="/images/home/albums/1.png" alt="" />
+              <img className="rounded" src="/images/home/albums/1.png" alt="" loading="lazy"/>
               <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
                 Mewni & Sanjay
               </p>
               <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-neutral-900 from-10% to-transparent rounded-bl rounded-br"></div>
             </div>
             <div className="relative">
-              <img className="rounded" src="/images/home/albums/2.png" alt="" />
+              <img className="rounded" src="/images/home/albums/2.png" alt="" loading="lazy"/>
               <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
                 Primashi & Naveen
               </p>
               <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-neutral-900 from-10% to-transparent rounded-bl rounded-br"></div>
             </div>
             <div className="relative">
-              <img className="rounded" src="/images/home/albums/3.png" alt="" />
+              <img className="rounded" src="/images/home/albums/3.png" alt="" loading="lazy" />
               <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
                 Nimesha & Mithun
               </p>
               <div className="absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t from-neutral-900 from-10% to-transparent rounded-bl rounded-br"></div>
             </div>
             <div className="relative">
-              <img className="rounded" src="/images/home/albums/4.png" alt="" />
+              <img className="rounded" src="/images/home/albums/4.png" alt="" loading="lazy" />
               <p className="absolute bottom-0 p-3 text-sm z-10 text-[#CFC8BD] shadow">
                 Ishara & Praneed
               </p>
