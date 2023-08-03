@@ -19,13 +19,13 @@ export function MainNav({ items }: MainNavProps) {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
 
   return (
-    <div className="flex items-center md:justify-between gap-6 md:gap-10 w-full h-20">
-      <Link href="/" className="flex-none h-12">
+    <div className="flex h-20 w-full items-center gap-6 md:justify-between md:gap-10">
+      <Link href="/" className="h-12 flex-none">
         <img src="/images/logo.svg" alt="" className="h-full" />
       </Link>
       <div className="hidden md:flex">
         {items?.length ? (
-          <nav className="hidden md:flex h-full gap-6">
+          <nav className="hidden h-full gap-6 md:flex">
             {items?.map(
               (item, index) =>
                 item.href && (
@@ -33,7 +33,7 @@ export function MainNav({ items }: MainNavProps) {
                     key={index}
                     href={item.href}
                     className={cn(
-                      "flex items-center text-sm text-header-foreground h-20 box-border hover:border-b-4 hover:border-header-border",
+                      "box-border flex h-20 items-center text-sm text-header-foreground hover:border-b-4 hover:border-header-border",
                       pathname === item.href &&
                         "border-b-2 border-header-border ",
                       item.disabled && "cursor-not-allowed opacity-80"

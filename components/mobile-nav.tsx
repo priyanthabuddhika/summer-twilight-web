@@ -22,7 +22,7 @@ export function MobileNav({ items, onClose }: MobileNavProps) {
       )}
     >
       <div className="relative z-20 grid gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md">
-        <nav className="grid grid-flow-row auto-rows-max text-sm gap-2">
+        <nav className="grid grid-flow-row auto-rows-max gap-2 text-sm">
           {items.map((item, index) => (
             <Link
               key={index}
