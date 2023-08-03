@@ -1,7 +1,6 @@
 import * as React from "react"
 import Link from "next/link"
 
-import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { useLockBody } from "@/lib/use-lock-body"
 import { NavItem } from "@/types/nav"
