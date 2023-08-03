@@ -19,7 +19,7 @@ export function MainNav({ items }: MainNavProps) {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
 
   return (
-    <div className="flex items-center  md:justify-between gap-6 md:gap-10 w-full h-20">
+    <div className="flex items-center md:justify-between gap-6 md:gap-10 w-full h-20">
       <Link href="/" className="flex-none h-12">
         <img src="/images/logo.svg" alt="" className="h-full" />
       </Link>
@@ -46,7 +46,7 @@ export function MainNav({ items }: MainNavProps) {
           </nav>
         ) : null}
       </div>
-      <Button className="ml-auto" variant="header" size="lgr">
+      <Button className="max-md:ml-auto" variant="header" size="lgr">
         Request a quote
       </Button>
       <button
