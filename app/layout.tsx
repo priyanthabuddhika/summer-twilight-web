@@ -11,7 +11,6 @@ import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 
-
 interface RootLayoutProps {
   children: React.ReactNode
 }
@@ -21,12 +20,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
   function raf(time: any) {
     if (lenis) {
-      lenis?.raf(time);
-      requestAnimationFrame(raf);
+      lenis?.raf(time)
+      if (typeof window !== "undefined") {
+        // Only use requestAnimationFrame in the browser environment
+        requestAnimationFrame(raf)
+      }
     }
   }
 
-  requestAnimationFrame(raf)
+  if (typeof window !== "undefined") {
+    requestAnimationFrame(raf)
+  }
 
   return (
     <>
