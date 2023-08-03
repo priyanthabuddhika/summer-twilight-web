@@ -37,9 +37,9 @@ export default function IndexPage() {
             Summer Twilight
           </h1>
           <p className="text-center text-base font-normal leading-7 ">
-            We're not just photographers, we're memory makers. Our passion is to
+            We&apos;re not just photographers, we&apos;re memory makers. Our passion is to
             create timeless images that capture the essence of your love and the
-            beauty of your relationship. We're committed to creating beautiful,
+            beauty of your relationship. We&apos;re committed to creating beautiful,
             high-quality photos that showcase the true magic of your special
             day. Let us help you tell your love story and create memories that
             will last a lifetime.

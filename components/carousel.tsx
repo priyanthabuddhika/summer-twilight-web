@@ -25,13 +25,13 @@ export default function Carousel() {
       modules={[Autoplay, Navigation, Pagination]}
     >
       <SwiperSlide className="bg-cover bg-center">
-        <img src="/images/slider-1.png" className=" w-full " />
+        <img src="/images/slider-1.png" className=" w-full " alt="slider 1" />
       </SwiperSlide>
       <SwiperSlide className="bg-cover bg-center">
-        <img src="/images/slider-2.png" className=" w-full " loading="lazy"/>
+        <img src="/images/slider-2.png" className=" w-full " loading="lazy" alt="slider 2"/>
       </SwiperSlide>
       <SwiperSlide className="bg-cover bg-center">
-        <img src="/images/slider-3.png" className=" w-full " loading="lazy" />
+        <img src="/images/slider-3.png" className=" w-full " loading="lazy" alt="slider 3"/>
       </SwiperSlide>
     </Swiper>
   )
