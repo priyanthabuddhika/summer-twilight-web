@@ -1,4 +1,3 @@
-import { Icons } from "@/components/icons"
 import MaterialIcon from "@/components/material-icon"
 
 export function Footer() {
