@@ -7,8 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'dmsans': ['DM Sans', 'sans-serif'],
-      'dmserif': ['DM Serif Display', 'serif'],
-      'marcellus': ['Marcellus', 'serif']
+      'dmserif': ['DM Serif Display', 'serif']
     },
     container: {
       center: true,
