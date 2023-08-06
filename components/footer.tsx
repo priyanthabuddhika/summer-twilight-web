@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <section
       id="footer"
-      className="h-full w-full bg-[url('/images/footer/bg.png')] bg-center"
+      className="h-full w-full bg-[url('/images/footer/bg.webp')] bg-center"
     >
       <div className="inset-0 bg-primary py-12 opacity-[90%] backdrop-blur-sm lg:py-20">
         <div className="container justify-between gap-6 text-center text-primary-foreground md:flex">
