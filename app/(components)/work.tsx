@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useLayoutEffect, useRef, useState } from "react"
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -14,9 +14,43 @@ const tabs = ["Weddings", "Engagements", "Casual Shots"]
 const OurWork = () => {
   const main = useRef<HTMLDivElement>(null)
   const tl1 = useRef<gsap.core.Timeline>()
+  const gsapFrom = useRef<gsap.core.Tween>()
 
   const [selectedTab, setTab] = useState(tabs[0])
 
+  const w = 874
+  const h = 1240
+
+  const generateImageSrc = (index: number) => {
+    return `https://source.unsplash.com/random/${w}x${h}?sig=${index}`
+  }
+
+  // useEffect(() => {
+  //   const ctx = gsap.context((self) => {
+  //     const animation = gsap.from(".work-img", {
+  //       scale: 0.1,
+  //       y: 60,
+  //       ease: "power1.inOut",
+  //       stagger: 0.1,
+  //       duration: 0.4,
+  //     });
+
+  //     return () => animation?.kill()
+  //   }, main);
+
+  //   return () => ctx.revert() // <- Cleanup!
+  // }, [selectedTab])
+
+  const onClick = () => {
+    gsap.from(".work-img", {
+            scale: 0.1,
+            y: 60,
+            ease: "power1.inOut",
+            stagger: 0.1,
+            duration: 0.4,
+          });
+  }
+  
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
       tl1.current = gsap
@@ -24,7 +58,7 @@ const OurWork = () => {
           scrollTrigger: {
             trigger: ".our-work",
             start: "top bottom",
-            end: "center 40%",
+            end: "top center",
             scrub: 1,
           },
         })
@@ -38,7 +72,7 @@ const OurWork = () => {
         })
 
       return () => {
-        tl1.current?.clear()
+        tl1.current?.kill()
       }
     }, main) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
@@ -62,7 +96,8 @@ const OurWork = () => {
                 <p
                   key={tab}
                   onClick={() => {
-                    setTab(tab)
+                    setTab(tab);
+                    onClick();
                   }}
                   className={cn(
                     "cursor-pointer border-primary ",
@@ -81,7 +116,11 @@ const OurWork = () => {
               <img
                 key={item}
                 className="work-img rounded-xl"
-                src={"/images/home/work/" + item + ".jpg"}
+                src={
+                  selectedTab !== "Weddings"
+                    ? generateImageSrc(item)
+                    : "/images/home/work/" + item + ".jpg"
+                }
                 alt=""
                 loading="lazy"
               />
