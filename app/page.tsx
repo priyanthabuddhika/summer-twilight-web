@@ -1,29 +1,12 @@
-import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import Carousel from "@/components/carousel"
 import MaterialIcon from "@/components/material-icon"
 
-const homeServices = [
-  {
-    img: "/images/home/services/1.png",
-    title: "Weddings",
-    description:
-      "I am dedicated to celebrating your story; the one that is worth.",
-  },
-  {
-    img: "/images/home/services/2.png",
-    title: "Engagements",
-    description:
-      "I am dedicated to celebrating your story; the one that is worth.",
-  },
-  {
-    img: "/images/home/services/3.svg",
-    title: "Casual Shots",
-    description:
-      "I am dedicated to celebrating your story; the one that is worth.",
-  },
-]
+import HomeGallery from "./(components)/gallery"
+import Overview from "./(components)/overview"
+import Services from "./(components)/sevice"
+import OurWork from "./(components)/work"
 
 export default function IndexPage() {
   return (
@@ -32,116 +15,14 @@ export default function IndexPage() {
         <Carousel />
       </section>
       <section id="abstract" className="py-8 md:py-12 lg:py-24">
-        <div className="container space-y-8 text-center">
-          <h1 className="scroll-m-20 text-4xl font-normal tracking-tight lg:text-5xl">
-            Summer Twilight
-          </h1>
-          <p className="text-center text-base font-normal leading-7 ">
-            We&apos;re not just photographers, we&apos;re memory makers. Our passion is to
-            create timeless images that capture the essence of your love and the
-            beauty of your relationship. We&apos;re committed to creating beautiful,
-            high-quality photos that showcase the true magic of your special
-            day. Let us help you tell your love story and create memories that
-            will last a lifetime.
-          </p>
-          <Link
-            href={"/about-us"}
-            className="inline-block cursor-pointer border-b border-primary pb-2 text-base font-normal leading-none tracking-widest text-primary hover:border-b-2"
-          >
-            More About Us
-          </Link>
-        </div>
+        <Overview />
       </section>
-      <section
-        id="services"
-        className="h-full w-full bg-[url('/images/home/services/bg.webp')] bg-fixed bg-center"
-      >
-        <div className="bg-secondary py-8 md:py-12 lg:py-24 ">
-          <div className="container space-y-8 text-center">
-            <h1 className="scroll-m-20 text-4xl font-normal tracking-tight lg:text-5xl">
-              Our Services
-            </h1>
-            <div className="flex justify-center">
-              <p className="w-4/5 text-center text-base font-normal leading-7 md:w-2/3 lg:w-1/2">
-                Tuxedo photo booth photographer limousine cake dessert guitar
-                acoustic bass Will overpriced florist seat covers mother veil
-                sparkles.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-5 md:flex-nowrap">
-              {homeServices.map((item, index) => {
-                return (
-                  <div
-                    key={item.title}
-                    className={cn(
-                      "w-full space-y-6 px-8 py-24 md:w-1/2 lg:w-1/3 rounded-xl ",
-                      index === 2
-                        ? "bg-primary text-primary-foreground"
-                        : "bg-background"
-                    )}
-                  >
-                    <img
-                      className="m-auto w-1/4"
-                      src={item.img}
-                      alt={item.title}
-                    />
-                    <h2
-                      className={cn(
-                        "text-3xl font-normal leading-9",
-                        index === 2 ? "text-primary-foreground" : ""
-                      )}
-                    >
-                      {item.title}
-                    </h2>
-                    <p className="mt-2">{item.description}</p>
-                  </div>
-                )
-              })}
-            </div>
-            <Link
-              href={"/services"}
-              className="inline-block cursor-pointer border-b border-primary pb-2 text-base font-normal leading-none tracking-widest text-primary hover:border-b-2"
-            >
-              Learn More
-            </Link>
-          </div>
-        </div>
+      <Services />
+      <section id="home-gallery" className="py-8 md:py-12 lg:py-24">
+        <HomeGallery />
       </section>
       <section id="work" className="py-8 md:py-12 lg:py-24">
-        <div className="container space-y-8 text-center">
-          <h1 className="scroll-m-20 text-4xl font-normal tracking-tight lg:text-left lg:text-5xl">
-            Our Work
-          </h1>
-          <div className="lg:flex lg:items-center lg:justify-between">
-            <p className="text-base font-normal leading-7 lg:w-1/2 lg:text-left">
-              Going shopping for your wedding gown can be as intimidating as it
-              is exciting. After all, you are spending way more than you
-              normally would on a dress.
-            </p>
-            <div className="flex justify-between gap-5 max-lg:mt-8 sm:justify-center sm:gap-10">
-              <p className="cursor-pointer border-b-2 border-primary">
-                Weddings
-              </p>
-              <p className="cursor-pointer hover:border-b-2 hover:border-primary">
-                Engagements
-              </p>
-              <p className="cursor-pointer hover:border-b-2 hover:border-primary">
-                Casual Shots
-              </p>
-            </div>
-          </div>
-          <div className="max-md:space-y-5 md:grid md:grid-cols-3 md:gap-5">
-            <img className="rounded-xl" src="/images/home/work/1.jpg" alt="" loading="lazy"/>
-            <img className="rounded-xl" src="/images/home/work/2.jpg" alt="" loading="lazy"/>
-            <img className="rounded-xl" src="/images/home/work/3.jpg" alt="" loading="lazy"/>
-          </div>
-          <Link
-            href={"/portfolio"}
-            className="inline-block cursor-pointer border-b border-primary pb-2 text-base font-normal leading-none tracking-widest text-primary hover:border-b-2"
-          >
-            Check Our Portfolio
-          </Link>
-        </div>
+        <OurWork />
       </section>
       <section id="testimonials" className="py-8 md:py-12 lg:py-24">
         <div className="space-y-8 text-center">
@@ -204,28 +85,48 @@ export default function IndexPage() {
           </p>
           <div className="max-md:space-y-5 md:grid md:grid-cols-2 md:gap-5 lg:grid-cols-4">
             <div className="relative">
-              <img className="rounded-md" src="/images/home/albums/1.webp" alt="" loading="lazy"/>
+              <img
+                className="rounded-md"
+                src="/images/home/albums/1.webp"
+                alt=""
+                loading="lazy"
+              />
               <p className="absolute bottom-0 z-10 p-3 text-sm text-[#CFC8BD] shadow">
                 Mewni & Sanjay
               </p>
               <div className="absolute bottom-0 left-0 h-1/3 w-full rounded-b-md bg-gradient-to-t from-neutral-900 from-10% to-transparent"></div>
             </div>
             <div className="relative">
-              <img className="rounded-md" src="/images/home/albums/2.webp" alt="" loading="lazy"/>
+              <img
+                className="rounded-md"
+                src="/images/home/albums/2.webp"
+                alt=""
+                loading="lazy"
+              />
               <p className="absolute bottom-0 z-10 p-3 text-sm text-[#CFC8BD] shadow">
                 Primashi & Naveen
               </p>
               <div className="absolute bottom-0 left-0 h-1/3 w-full rounded-b-md bg-gradient-to-t from-neutral-900 from-10% to-transparent"></div>
             </div>
             <div className="relative">
-              <img className="rounded-md" src="/images/home/albums/3.webp" alt="" loading="lazy" />
+              <img
+                className="rounded-md"
+                src="/images/home/albums/3.webp"
+                alt=""
+                loading="lazy"
+              />
               <p className="absolute bottom-0 z-10 p-3 text-sm text-[#CFC8BD] shadow">
                 Nimesha & Mithun
               </p>
               <div className="absolute bottom-0 left-0 h-1/3 w-full rounded-b-md bg-gradient-to-t from-neutral-900 from-10% to-transparent"></div>
             </div>
             <div className="relative">
-              <img className="rounded-md" src="/images/home/albums/4.webp" alt="" loading="lazy" />
+              <img
+                className="rounded-md"
+                src="/images/home/albums/4.webp"
+                alt=""
+                loading="lazy"
+              />
               <p className="absolute bottom-0 z-10 p-3 text-sm text-[#CFC8BD] shadow">
                 Ishara & Praneed
               </p>
