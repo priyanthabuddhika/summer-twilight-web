@@ -1,18 +1,18 @@
 import * as React from "react"
 import Link from "next/link"
-
-import { cn } from "@/lib/utils"
-import { useLockBody } from "@/lib/use-lock-body"
-import { NavItem } from "@/types/nav"
 import { usePathname } from "next/navigation"
 
+import { NavItem } from "@/types/nav"
+import { useLockBody } from "@/lib/use-lock-body"
+import { cn } from "@/lib/utils"
+
 interface MobileNavProps {
-  items: NavItem[],
+  items: NavItem[]
   onClose: () => void
 }
 
 export function MobileNav({ items, onClose }: MobileNavProps) {
-  const pathname = usePathname();
+  const pathname = usePathname()
   useLockBody()
 
   return (
@@ -29,7 +29,8 @@ export function MobileNav({ items, onClose }: MobileNavProps) {
               href={item.disabled ? "#" : item.href}
               className={cn(
                 "flex w-full items-center p-4 text-sm font-medium hover:bg-muted",
-                pathname === item.href && "border-l-4 border-primary bg-secondary ",
+                pathname === item.href &&
+                  "border-l-4 border-primary bg-secondary ",
                 item.disabled && "cursor-not-allowed opacity-60"
               )}
               onClick={onClose}

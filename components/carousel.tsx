@@ -1,6 +1,6 @@
 "use client"
 
-import { Autoplay, Navigation, Pagination} from "swiper/modules"
+import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 import "swiper/css"
@@ -28,10 +28,20 @@ export default function Carousel() {
         <img src="/images/slider-1.webp" className=" w-full " alt="slider 1" />
       </SwiperSlide>
       <SwiperSlide className="bg-cover bg-center">
-        <img src="/images/slider-2.webp" className=" w-full " loading="lazy" alt="slider 2"/>
+        <img
+          src="/images/slider-2.webp"
+          className=" w-full "
+          loading="lazy"
+          alt="slider 2"
+        />
       </SwiperSlide>
       <SwiperSlide className="bg-cover bg-center">
-        <img src="/images/slider-3.webp" className=" w-full " loading="lazy" alt="slider 3"/>
+        <img
+          src="/images/slider-3.webp"
+          className=" w-full "
+          loading="lazy"
+          alt="slider 3"
+        />
       </SwiperSlide>
     </Swiper>
   )

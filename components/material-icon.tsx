@@ -7,7 +7,7 @@ export type MtIcon =
   | "menu"
   | "west"
   | "east"
-  
+
 /**
  * Reusable React component that displays Material icons.
  *
@@ -15,11 +15,11 @@ export type MtIcon =
  * @extends React.HTMLAttributes<HTMLSpanElement>
  */
 interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
-  icon?: MtIcon;
-  size?: number;
-  color?: string;
-  fill?: boolean;
-  displayInline?: boolean;
+  icon?: MtIcon
+  size?: number
+  color?: string
+  fill?: boolean
+  displayInline?: boolean
 }
 /**
  * React functional component that renders an icon based on a given `MtIcon` string value.
@@ -28,7 +28,7 @@ interface IProps extends React.HTMLAttributes<HTMLSpanElement> {
  * @returns {JSX.Element} - Rendered component.
  */
 const MaterialIcon = (props: IProps) => {
-  const { size, color, fill, displayInline, ...rest } = props;
+  const { size, color, fill, displayInline, ...rest } = props
   return (
     <span
       {...{
@@ -50,6 +50,6 @@ const MaterialIcon = (props: IProps) => {
     >
       {props.icon}
     </span>
-  );
-};
-export default MaterialIcon;
+  )
+}
+export default MaterialIcon

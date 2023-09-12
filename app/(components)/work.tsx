@@ -76,15 +76,15 @@ const OurWork = () => {
           </div>
         </div>
         <div className="max-md:space-y-5 md:grid md:grid-cols-3 md:gap-5">
-          {[1,2,3].map(item => {
+          {[1, 2, 3].map((item) => {
             return (
               <img
-              key={item}
-              className="work-img rounded-xl"
-              src={"/images/home/work/" + item +".jpg"}
-              alt=""
-              loading="lazy"
-            />
+                key={item}
+                className="work-img rounded-xl"
+                src={"/images/home/work/" + item + ".jpg"}
+                alt=""
+                loading="lazy"
+              />
             )
           })}
         </div>

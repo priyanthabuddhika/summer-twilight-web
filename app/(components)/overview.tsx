@@ -25,7 +25,7 @@ const Overview = () => {
             scrub: 1,
           },
         })
-        .set(overviewTitle.chars, {translateY: 115})
+        .set(overviewTitle.chars, { translateY: 115 })
         .to(overviewTitle.chars, {
           y: 0,
           stagger: 0.05,
