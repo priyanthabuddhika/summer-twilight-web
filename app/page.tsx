@@ -1,6 +1,7 @@
 import Carousel from "@/components/carousel"
 
 import Albums from "./(components)/albums"
+import Blogs from "./(components)/blogs"
 import HomeGallery from "./(components)/gallery"
 import Overview from "./(components)/overview"
 import Services from "./(components)/sevice"
@@ -23,8 +24,11 @@ export default function IndexPage() {
       <section id="work" className="py-8 md:py-12 lg:py-24">
         <OurWork />
       </section>
- 
-        <Testimonials />
+
+      <Testimonials />
+      <section id="blogs" className="py-8 md:py-12 lg:py-24">
+        <Blogs />
+      </section>
       <section id="albums" className="py-8 md:py-12 lg:py-24">
         <Albums />
       </section>
