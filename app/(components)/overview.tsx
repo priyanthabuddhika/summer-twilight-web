@@ -20,17 +20,19 @@ const Overview = () => {
         .timeline({
           scrollTrigger: {
             trigger: ".overview",
-            start: "top bottom",
+            start: "top 90%",
             end: "top 30%",
             scrub: 0.1,
-            toggleActions: "play none none reverse", 
+            toggleActions: "play none none reverse",
           },
         })
-        .set(overviewTitle.chars, { translateY: 115 })
+        .set(overviewTitle.chars, { translateY: 115, opacity: 0 })
         .to(overviewTitle.chars, {
+          opacity: 1,
           y: 0,
           stagger: 0.05,
           duration: 0.2,
+          delay: 0.2,
         })
         .from(".about", {
           opacity: 0,

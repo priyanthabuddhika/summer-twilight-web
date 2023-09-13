@@ -82,8 +82,8 @@ const DemoComponent = () => {
         <div className="container mx-auto flex max-lg:gap-2">
           <div className="flex-1 max-h-[100vh] flex flex-col justify-center">
             <h2 className="title text-[14vw] md:text-[7vw] font-semibold leading-[0.9em] mb-8">
-              Vivid
-              <br /> Timeless Snaps
+              Make your special day memorable.
+              <br />
             </h2>
             <p className="paragraph text-sm lg:text-base mb-10 leading-5 md:leading-6 ">
               Create<span className="font-bold"> timeless memories</span> with

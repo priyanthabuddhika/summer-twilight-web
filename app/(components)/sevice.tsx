@@ -37,6 +37,24 @@ const Services = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
+      tl2.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#services",
+            start: "top bottom",
+            end: "top center",
+            toggleActions: "play none none reverse",
+          },
+        })
+        .from(".card", {
+          scale: 0.1,
+          y: 60,
+          ease: "power1.inOut",
+          stagger: 0.2,
+          duration: 0.6,
+          reversed: true,
+        })
+
       tl1.current = gsap
         .timeline()
         .to(".services-img", {
@@ -48,10 +66,8 @@ const Services = () => {
 
       tl1.current.repeat(-1)
 
-      tl1.current.play()
-
       return () => {
-        tl1.current?.clear()
+        tl1.current?.kill()
       }
     }, main) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
@@ -81,7 +97,7 @@ const Services = () => {
                   <div
                     key={item.title}
                     className={cn(
-                      "card w-full space-y-6 rounded-xl px-8 py-24 transition-transform duration-300 ease-in-out hover:translate-y-[-10px] md:w-1/2 lg:w-1/3",
+                      "card w-full space-y-6 rounded-xl px-8 py-24 md:w-1/2 lg:w-1/3",
                       index === 2
                         ? "bg-primary text-primary-foreground"
                         : "bg-background"
