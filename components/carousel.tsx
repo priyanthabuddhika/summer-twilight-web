@@ -37,7 +37,7 @@ export default function Carousel() {
       </SwiperSlide>
       <SwiperSlide className="bg-cover bg-center">
         <img
-          src="/images/slider-3.webp"
+          src="/images/slider-4.webp"
           className=" w-full "
           loading="lazy"
           alt="slider 3"
