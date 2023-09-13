@@ -22,14 +22,14 @@ const Overview = () => {
             trigger: ".overview",
             start: "top bottom",
             end: "top 30%",
-            scrub: 1,
+            scrub: 0.1,
+            toggleActions: "play none none reverse", 
           },
         })
         .set(overviewTitle.chars, { translateY: 115 })
         .to(overviewTitle.chars, {
           y: 0,
           stagger: 0.05,
-          delay: 0.2,
           duration: 0.2,
         })
         .from(".about", {

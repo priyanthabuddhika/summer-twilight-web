@@ -23,9 +23,8 @@ export default function IndexPage() {
       <section id="work" className="py-8 md:py-12 lg:py-24">
         <OurWork />
       </section>
-      <section id="testimonials" className="py-8 md:py-12 lg:py-24">
+ 
         <Testimonials />
-      </section>
       <section id="albums" className="py-8 md:py-12 lg:py-24">
         <Albums />
       </section>

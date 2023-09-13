@@ -76,16 +76,16 @@ const DemoComponent = () => {
   return (
     <div ref={main}>
       <section
-        className="reel-section overflow-hidden p-1 md:h-[100vh] md:p-5"
+        className="reel-section md:h-[100vh] overflow-hidden md:p-5 p-1"
         data-theme="white"
       >
         <div className="container mx-auto flex max-lg:gap-2">
-          <div className="flex max-h-[100vh] flex-1 flex-col justify-center">
-            <h2 className="title mb-8 text-[14vw] font-semibold leading-[0.9em] md:text-[7vw]">
+          <div className="flex-1 max-h-[100vh] flex flex-col justify-center">
+            <h2 className="title text-[14vw] md:text-[7vw] font-semibold leading-[0.9em] mb-8">
               Vivid
               <br /> Timeless Snaps
             </h2>
-            <p className="paragraph mb-10 text-sm leading-5 md:leading-6 lg:text-base ">
+            <p className="paragraph text-sm lg:text-base mb-10 leading-5 md:leading-6 ">
               Create<span className="font-bold"> timeless memories</span> with
               our vivid snaps. Discover the art of photography on our website,
               where each image captures moments that last a lifetime. Explore
@@ -94,7 +94,7 @@ const DemoComponent = () => {
             </p>
           </div>
 
-          <div className=" hidden md:flex md:flex-1 md:gap-2 lg:gap-5 ">
+          <div className=" md:flex md:flex-1 hidden lg:gap-5 md:gap-2 ">
             <figure className="bg"></figure>
             <div className="reel left">
               <ul className="reel-list flex flex-col gap-1 ">
@@ -103,19 +103,19 @@ const DemoComponent = () => {
                     <img
                       src={generateImageSrc(index)}
                       alt={`Image ${index}`}
-                      className="h-[250px] w-full rounded-2xl lg:h-[375px] "
+                      className="w-full h-[250px] lg:h-[375px] rounded-2xl "
                     />
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="right hidden overflow-hidden lg:block">
+            <div className="right hidden lg:block overflow-hidden">
               <ul className="reel-list flex flex-col gap-1">
                 {[3, 4, 5, 6, 7, 8].map((index) => (
                   <li className="reel-item mb-5" key={index}>
                     <img
                       src={generateImageSrc(index)}
-                      className="h-[250px] w-full rounded-2xl lg:h-[375px] "
+                      className="w-full h-[250px] lg:h-[375px] rounded-2xl "
                       alt={`Image ${index}`}
                     />
                   </li>

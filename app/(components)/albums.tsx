@@ -1,3 +1,11 @@
+"use client"
+
+import { useLayoutEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
+
 const albumData = [
   {
     img: "/images/home/albums/1.webp",
@@ -18,9 +26,39 @@ const albumData = [
 ]
 
 const Albums = () => {
+
+  const main = useRef<HTMLDivElement>(null);
+  const tl1 = useRef<gsap.core.Timeline>();
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      tl1.current = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#albums",
+            start: "top bottom",
+            end: "top center",
+            toggleActions: "play none none reverse", 
+          },
+        })
+        .from(".album-img", {
+          scale: 0.1,
+          y: 60,
+          ease: "power1.inOut",
+          stagger: 0.2,
+          duration: 0.6,
+        })
+
+      return () => {
+        tl1.current?.kill()
+      }
+    }, main) // <- Scope!
+    return () => ctx.revert() // <- Cleanup!
+  }, [])
+
   return (
-    <div>
-      <div className="container space-y-8 text-center">
+    <div ref={main}>
+      <div id="albums" className="container space-y-8 text-center">
         <h1 className="scroll-m-20 text-4xl font-normal tracking-tight md:text-left lg:text-5xl">
           Recent Albums
         </h1>
@@ -32,7 +70,7 @@ const Albums = () => {
         <div className="max-md:space-y-5 md:grid md:grid-cols-2 md:gap-5 lg:grid-cols-4">
           {albumData.map((data, index) => {
             return (
-              <div key={index} className="relative overflow-hidden">
+              <div key={index} className="album-img relative overflow-hidden">
                 <img
                   className="cursor-pointer rounded-md transition duration-500 hover:scale-110"
                   src={data.img}

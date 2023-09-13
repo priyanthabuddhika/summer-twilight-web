@@ -46,7 +46,7 @@ export function MainNav({ items }: MainNavProps) {
           </nav>
         ) : null}
       </div>
-      <Button className="hidden max-md:ml-auto" variant="header" size="lgr">
+      <Button className="hidden md:block max-md:ml-auto" variant="header" size="lgr">
         Request a quote
       </Button>
       <button

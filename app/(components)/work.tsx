@@ -43,7 +43,7 @@ const OurWork = () => {
 
   const onClick = () => {
     gsap.from(".work-img", {
-      scale: 0.1,
+      scale: 0,
       y: 60,
       ease: "power1.inOut",
       stagger: 0.1,
@@ -59,16 +59,15 @@ const OurWork = () => {
             trigger: ".our-work",
             start: "top bottom",
             end: "top center",
-            scrub: 1,
+            toggleActions: "play none none reverse", 
           },
         })
         .from(".work-img", {
           scale: 0.1,
           y: 60,
           ease: "power1.inOut",
-          delay: 1,
           stagger: 0.2,
-          duration: 2,
+          duration: 1,
         })
 
       return () => {
