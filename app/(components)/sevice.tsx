@@ -81,7 +81,7 @@ const Services = () => {
                   <div
                     key={item.title}
                     className={cn(
-                      "card w-full space-y-6 px-8 py-24 md:w-1/2 lg:w-1/3 rounded-xl transform hover:translate-y-[-10px] transition-transform duration-300 ease-in-out ",
+                      "card w-full space-y-6 rounded-xl px-8 py-24 transition-transform duration-300 ease-in-out hover:translate-y-[-10px] md:w-1/2 lg:w-1/3",
                       index === 2
                         ? "bg-primary text-primary-foreground"
                         : "bg-background"

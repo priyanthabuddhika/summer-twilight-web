@@ -28,9 +28,9 @@ export function MobileNav({ items, onClose }: MobileNavProps) {
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                "flex w-full items-center p-4 text-sm font-medium hover:bg-muted",
+                "flex w-full items-center justify-center p-4 text-sm font-medium hover:bg-muted",
                 pathname === item.href &&
-                  "border-l-4 border-primary bg-secondary ",
+                  "border-b-4 border-primary bg-secondary ",
                 item.disabled && "cursor-not-allowed opacity-60"
               )}
               onClick={onClose}

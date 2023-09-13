@@ -76,27 +76,25 @@ const DemoComponent = () => {
   return (
     <div ref={main}>
       <section
-        className="reel-section md:h-[100vh] overflow-hidden md:p-5 p-1"
+        className="reel-section overflow-hidden p-1 md:h-[100vh] md:p-5"
         data-theme="white"
       >
-        <div className=" md:pt-20 container mx-auto flex max-lg:gap-2">
-          <div className="flex-1">
-            <h2 className="title text-[14vw] md:text-[7vw] font-semibold leading-[0.9em] mb-8">
+        <div className="container mx-auto flex max-lg:gap-2">
+          <div className="flex max-h-[100vh] flex-1 flex-col justify-center">
+            <h2 className="title mb-8 text-[14vw] font-semibold leading-[0.9em] md:text-[7vw]">
               Vivid
               <br /> Timeless Snaps
             </h2>
-            <p className="paragraph text-sm lg:text-base mb-10 leading-5 md:leading-6 ">
-              El{" "}
-              <span className="font-bold">Día de las Películas Familiares</span>{" "}
-              es un evento abierto y gratuito que se celebra a nivel
-              internacional y que es organizado por voluntarios que buscan
-              llamar la atención sobre la importancia de preservar los registros
-              amateurs, cotidianos y domésticos por el valor que tienen para la
-              memoria colectiva y el patrimonio cultural de un país.
+            <p className="paragraph mb-10 text-sm leading-5 md:leading-6 lg:text-base ">
+              Create<span className="font-bold"> timeless memories</span> with
+              our vivid snaps. Discover the art of photography on our website,
+              where each image captures moments that last a lifetime. Explore
+              the world through our lens and experience the beauty of vivid,
+              timeless snaps. Join us for a visual journey like no other.
             </p>
           </div>
 
-          <div className=" md:flex md:flex-1 hidden lg:gap-5 md:gap-2 ">
+          <div className=" hidden md:flex md:flex-1 md:gap-2 lg:gap-5 ">
             <figure className="bg"></figure>
             <div className="reel left">
               <ul className="reel-list flex flex-col gap-1 ">
@@ -105,19 +103,19 @@ const DemoComponent = () => {
                     <img
                       src={generateImageSrc(index)}
                       alt={`Image ${index}`}
-                      className="w-full h-[250px] lg:h-[375px] rounded-2xl "
+                      className="h-[250px] w-full rounded-2xl lg:h-[375px] "
                     />
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="right hidden lg:block overflow-hidden">
+            <div className="right hidden overflow-hidden lg:block">
               <ul className="reel-list flex flex-col gap-1">
                 {[3, 4, 5, 6, 7, 8].map((index) => (
                   <li className="reel-item mb-5" key={index}>
                     <img
                       src={generateImageSrc(index)}
-                      className="w-full h-[250px] lg:h-[375px] rounded-2xl "
+                      className="h-[250px] w-full rounded-2xl lg:h-[375px] "
                       alt={`Image ${index}`}
                     />
                   </li>

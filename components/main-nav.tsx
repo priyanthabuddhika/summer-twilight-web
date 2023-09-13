@@ -19,8 +19,8 @@ export function MainNav({ items }: MainNavProps) {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
 
   return (
-    <div className="flex h-16 md:h-20 w-full items-center gap-6 md:justify-between md:gap-10">
-      <Link href="/" className="h-10 md:h-12 flex-none">
+    <div className="flex h-16 w-full items-center gap-6 md:h-20 md:justify-between md:gap-10">
+      <Link href="/" className="h-10 flex-none md:h-12">
         <img src="/images/logo.svg" alt="" className="h-full" />
       </Link>
       <div className="hidden md:flex">
@@ -46,11 +46,11 @@ export function MainNav({ items }: MainNavProps) {
           </nav>
         ) : null}
       </div>
-      <Button className="max-md:ml-auto" variant="header" size="lgr">
+      <Button className="hidden max-md:ml-auto" variant="header" size="lgr">
         Request a quote
       </Button>
       <button
-        className="flex items-center space-x-2 md:hidden"
+        className="ml-auto flex items-center space-x-2 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
         {showMobileMenu ? (

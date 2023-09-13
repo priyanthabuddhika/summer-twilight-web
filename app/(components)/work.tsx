@@ -43,14 +43,14 @@ const OurWork = () => {
 
   const onClick = () => {
     gsap.from(".work-img", {
-            scale: 0.1,
-            y: 60,
-            ease: "power1.inOut",
-            stagger: 0.1,
-            duration: 0.4,
-          });
+      scale: 0.1,
+      y: 60,
+      ease: "power1.inOut",
+      stagger: 0.1,
+      duration: 0.4,
+    })
   }
-  
+
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
       tl1.current = gsap
@@ -96,8 +96,8 @@ const OurWork = () => {
                 <p
                   key={tab}
                   onClick={() => {
-                    setTab(tab);
-                    onClick();
+                    setTab(tab)
+                    onClick()
                   }}
                   className={cn(
                     "cursor-pointer border-primary ",
