@@ -47,7 +47,7 @@ const Testimonials = () => {
         .from(
           "#t-img",
           {
-            y: 500,
+            y: 200,
             ease: "ease in",
             delay: 0.4,
             duration: 1,
