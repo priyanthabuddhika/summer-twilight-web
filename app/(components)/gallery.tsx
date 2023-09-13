@@ -74,7 +74,7 @@ const DemoComponent = () => {
       >
         <div className="container mx-auto flex max-lg:gap-2">
           <div className="flex-1 max-h-[100vh] flex flex-col justify-center">
-            <h2 className="title text-[14vw] md:text-[7vw] font-semibold leading-[0.9em] mb-8">
+            <h2 className="title text-[10vw] md:text-[5vw] font-semibold leading-[0.9em] mb-8">
               Make your special day memorable.
               <br />
             </h2>
