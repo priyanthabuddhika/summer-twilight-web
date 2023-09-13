@@ -47,7 +47,7 @@ const Services = () => {
           },
         })
         .from(".card", {
-          scale: 0.1,
+          scale: 0,
           y: 60,
           ease: "power1.inOut",
           stagger: 0.2,

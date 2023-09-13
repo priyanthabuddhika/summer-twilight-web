@@ -12,13 +12,6 @@ const DemoComponent = () => {
   const tl1 = useRef<gsap.core.Timeline>()
   const tl2 = useRef<gsap.core.Timeline>()
 
-  const w = 874
-  const h = 1240
-
-  const generateImageSrc = (index: number) => {
-    return `https://source.unsplash.com/random/${w}x${h}?sig=${index}`
-  }
-
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
       const reelSectionTitle = new SplitType(".reel-section .title")
@@ -30,7 +23,7 @@ const DemoComponent = () => {
           .timeline({
             scrollTrigger: {
               trigger: ".reel-section",
-              start: "0% 0%",
+              start: "top center",
               end: "20% 20%",
               scrub: 1,
             },
@@ -98,10 +91,10 @@ const DemoComponent = () => {
             <figure className="bg"></figure>
             <div className="reel left">
               <ul className="reel-list flex flex-col gap-1 ">
-                {[0, 1, 2, 3, 4, 5].map((index) => (
+                {[1, 2, 3, 4, 5, 6].map((index) => (
                   <li className="reel-item mb-5" key={index}>
                     <img
-                      src={generateImageSrc(index)}
+                      src={"/images/home/gallery/" + index + "l.png"}
                       alt={`Image ${index}`}
                       className="w-full h-[250px] lg:h-[375px] rounded-2xl "
                     />
@@ -111,10 +104,10 @@ const DemoComponent = () => {
             </div>
             <div className="right hidden lg:block overflow-hidden">
               <ul className="reel-list flex flex-col gap-1">
-                {[3, 4, 5, 6, 7, 8].map((index) => (
+                {[6, 5, 4, 3, 2, 1, 4].map((index) => (
                   <li className="reel-item mb-5" key={index}>
                     <img
-                      src={generateImageSrc(index)}
+                      src={"/images/home/gallery/" + index + "l.png"}
                       className="w-full h-[250px] lg:h-[375px] rounded-2xl "
                       alt={`Image ${index}`}
                     />

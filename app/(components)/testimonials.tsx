@@ -3,7 +3,6 @@
 import { useLayoutEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import SplitType from "split-type"
 
 import { cn } from "@/lib/utils"
 import MaterialIcon from "@/components/material-icon"
@@ -45,19 +44,27 @@ const Testimonials = () => {
           },
         })
         .addLabel("t")
-        .from("#t-img", {
-          y: 500,
-          ease: "ease in",
-          delay: 0.4,
-          duration: 1,
-        }, ".t")
-        .from(".t-right", {
-          x: 200,
-          ease: "ease in",
-          duration: 1,
-          delay: 0.4,
-          stagger: 0.1,
-        }, ".t")
+        .from(
+          "#t-img",
+          {
+            y: 500,
+            ease: "ease in",
+            delay: 0.4,
+            duration: 1,
+          },
+          ".t"
+        )
+        .from(
+          ".t-right",
+          {
+            x: 200,
+            ease: "ease in",
+            duration: 1,
+            delay: 0.2,
+            stagger: 0.1,
+          },
+          ".t"
+        )
       // md:transition-transform md:duration-300 md:ease-in-out md:hover:translate-y-[-25px]
       return () => {
         tl1.current?.kill()
@@ -69,15 +76,15 @@ const Testimonials = () => {
   return (
     <div ref={main}>
       <section className="py-8 md:py-12 lg:py-24">
-        <div  id="testimonials" className="space-y-8 text-center">
+        <div id="testimonials" className="space-y-8 text-center">
           <h1 className="mb-16 scroll-m-20 text-4xl font-normal tracking-tight lg:mb-24 lg:text-5xl">
             Testimonials
           </h1>
           <div
             className={
-              "h-full w-full bg-[url(" +
+              "h-full w-full bg-[url('" +
               testimonials[currentIndex].bgImg +
-              ")] bg-fixed bg-center"
+              "')] bg-fixed bg-center"
             }
           >
             <div className="bg-secondary">
