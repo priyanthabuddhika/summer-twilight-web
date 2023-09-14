@@ -30,25 +30,25 @@ const Blogs = () => {
       <div className="max-md:space-y-5 md:grid md:grid-cols-2 md:gap-5 lg:grid-cols-2  ">
         {blogData.map((data, index) => {
           return (
-            <div className="bg-[#F6F6F6] rounded-xl">
+            <div className="rounded-xl bg-[#F6F6F6]">
               <div key={index} className="blog-img relative overflow-hidden ">
                 <img
-                  className="cursor-pointer object-cover rounded-md max-h-[300px] w-full transition duration-500 hover:scale-110"
+                  className="max-h-[300px] w-full cursor-pointer rounded-md object-cover transition duration-500 hover:scale-110"
                   src={data.img}
                   alt={data.title}
                   loading="lazy"
                 />
                 <div className="p-5 text-left">
-                  <h4 className="text-2xl font-dmserif text-[#60526B] text-left mb-1">
+                  <h4 className="mb-1 text-left font-dmserif text-2xl text-[#60526B]">
                     {data.title}
                   </h4>
-                  <p className="text-sm text-[#7C7C7C] text-left">
+                  <p className="text-left text-sm text-[#7C7C7C]">
                     {data.description}
                   </p>
-                  <div className="flex  mt-5">
+                  <div className="mt-5  flex">
                     <Link
                       href={""}
-                      className="inline-block cursor-pointer text-base font-normal leading-none tracking-widest text-primary hover:border-b-2 mt-1 mr-2"
+                      className="mr-2 mt-1 inline-block cursor-pointer text-base font-normal leading-none tracking-widest text-primary hover:border-b-2"
                     >
                       Read More
                     </Link>

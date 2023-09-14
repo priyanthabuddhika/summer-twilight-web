@@ -26,9 +26,8 @@ const albumData = [
 ]
 
 const Albums = () => {
-
-  const main = useRef<HTMLDivElement>(null);
-  const tl1 = useRef<gsap.core.Timeline>();
+  const main = useRef<HTMLDivElement>(null)
+  const tl1 = useRef<gsap.core.Timeline>()
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
@@ -38,7 +37,7 @@ const Albums = () => {
             trigger: "#albums",
             start: "top bottom",
             end: "top center",
-            toggleActions: "play none none reverse", 
+            toggleActions: "play none none reverse",
           },
         })
         .from(".album-img", {

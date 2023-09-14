@@ -14,40 +14,72 @@ const Overview = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context((self) => {
+      let mm = gsap.matchMedia()
+
       const overviewTitle = new SplitType(".title")
 
-      tl1.current = gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: ".overview",
-            start: "top 90%",
-            end: "top 30%",
-            scrub: 0.1,
-            toggleActions: "play none none reverse",
-          },
-        })
-        .set(overviewTitle.chars, { translateY: 115, opacity: 0 })
-        .to(overviewTitle.chars, {
-          opacity: 1,
-          y: 0,
-          stagger: 0.05,
-          duration: 0.2,
-          delay: 0.2,
-        })
-        .from(".about", {
-          opacity: 0,
-          stagger: 0.2,
-          duration: 0.4,
-        })
-        .from(".link", {
-          opacity: 0,
-          stagger: 0.2,
-          duration: 0.3,
-        })
+      mm.add("(min-width: 768px)", () => {
+        tl1.current = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".overview",
+              start: "top 90%",
+              end: "top 30%",
+              scrub: 0.1,
+              toggleActions: "play none none reverse",
+            },
+          })
+          .set(overviewTitle.chars, { translateY: 115, opacity: 0 })
+          .to(overviewTitle.chars, {
+            opacity: 1,
+            y: 0,
+            stagger: 0.05,
+            duration: 0.2,
+            delay: 0.2,
+          })
+          .from(".about", {
+            opacity: 0,
+            stagger: 0.2,
+            duration: 0.4,
+          })
+          .from(".link", {
+            opacity: 0,
+            stagger: 0.2,
+            duration: 0.3,
+          })
 
-      return () => {
-        tl1.current?.clear()
-      }
+        return () => {
+          tl1.current?.kill()
+        }
+      })
+
+      mm.add("(max-width: 767px)", () => {
+        tl1.current = gsap
+          .timeline()
+          .set(overviewTitle.chars, { translateY: 115, opacity: 0 })
+          .to(overviewTitle.chars, {
+            opacity: 1,
+            y: 0,
+            stagger: 0.05,
+            duration: 0.2,
+            delay: 0.2,
+          })
+          .from(".about", {
+            opacity: 0,
+            duration: 0.4,
+          })
+          .from(".link", {
+            opacity: 0,
+            stagger: 0.2,
+            duration: 0.3,
+          })
+
+        return () => {
+          tl1.current?.kill()
+        }
+      })
+
+      return () => mm.kill()
     }, main) // <- Scope!
     return () => ctx.revert() // <- Cleanup!
   }, [])

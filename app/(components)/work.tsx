@@ -59,7 +59,7 @@ const OurWork = () => {
             trigger: ".our-work",
             start: "top bottom",
             end: "top center",
-            toggleActions: "play none none reverse", 
+            toggleActions: "play none none reverse",
           },
         })
         .from(".work-img", {

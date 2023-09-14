@@ -84,7 +84,7 @@ const Testimonials = () => {
             className={
               "h-full w-full bg-[url('" +
               testimonials[currentIndex].bgImg +
-              "')] bg-fixed bg-center"
+              "')] bg-fixed bg-center overflow-x-hidden"
             }
           >
             <div className="bg-secondary">
@@ -98,7 +98,7 @@ const Testimonials = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="my-auto h-full space-y-8 max-md:pb-16 md:w-1/2">
+                <div className="my-auto h-full space-y-8 max-md:pb-16 md:w-1/2 ">
                   <img
                     className="t-right mx-auto"
                     src="/images/home/testimonials/quotes.svg"

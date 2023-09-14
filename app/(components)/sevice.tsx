@@ -80,7 +80,7 @@ const Services = () => {
         className="h-full w-full bg-[url('/images/home/services/bg.webp')] bg-fixed bg-center"
       >
         <div className="bg-secondary py-8 md:py-12 lg:py-24 ">
-          <div className="container space-y-8 text-center">
+          <div className="container space-y-8 overflow-x-hidden text-center">
             <h1 className="scroll-m-20 text-4xl font-normal tracking-tight lg:text-5xl">
               Our Services
             </h1>
