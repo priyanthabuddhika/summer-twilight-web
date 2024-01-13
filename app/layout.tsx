@@ -10,6 +10,7 @@ import { Footer } from "@/components/footer"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "@/components/ui/toaster"
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -33,10 +34,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
   }
 
   return (
-    <>
-      <ReactLenis root>
+    <ReactLenis root>
         <html lang="en" suppressHydrationWarning>
           <head>
+            <title>Summer Twilight</title>
             <link
               rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -56,9 +57,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </div>
               <TailwindIndicator />
             </ThemeProvider>
+            <Toaster />
           </body>
         </html>
       </ReactLenis>
-    </>
   )
 }

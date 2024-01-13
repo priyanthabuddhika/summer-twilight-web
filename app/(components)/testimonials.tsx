@@ -84,7 +84,7 @@ const Testimonials = () => {
             className={
               "h-full w-full bg-[url('" +
               testimonials[currentIndex].bgImg +
-              "')] bg-fixed bg-center overflow-x-hidden"
+              "')] bg-fixed bg-center"
             }
           >
             <div className="bg-secondary">
