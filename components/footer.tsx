@@ -52,7 +52,7 @@ export function Footer() {
                 src="/images/footer/logo.svg"
                 alt="logo"
               />
-              <p className="font-normal md:text-left">
+              <p className="font-normal md:text-left text-white">
                 If you would like to say hello or ask a general question, please
                 get in touch.
               </p>
@@ -68,7 +68,12 @@ export function Footer() {
                     icon={"mail"}
                     fill
                   />
-                  <p>info@summertwilight.lk</p>
+                  <a
+                    className="text-white"
+                    href="mailto:info@summertwilight.lk"
+                  >
+                    info@summertwilight.lk
+                  </a>
                 </div>
                 <div className="flex gap-2 max-sm:justify-center">
                   <MaterialIcon
@@ -76,7 +81,9 @@ export function Footer() {
                     icon={"call"}
                     fill
                   />
-                  <p>info@summertwilight.lk</p>
+                  <a className="text-white" href="tel:+94714372763">
+                    0714372763
+                  </a>
                 </div>
                 <div className="flex gap-2 max-sm:items-center max-sm:justify-center sm:items-start">
                   <MaterialIcon
@@ -84,7 +91,7 @@ export function Footer() {
                     icon={"location_on"}
                     fill
                   />
-                  <p className="sm:text-left">
+                  <p className="sm:text-left text-white">
                     44/5 Pitawella Road, Malani Bulathsinghala Mawatha,
                     Boralesgamuwa 10290 Colombo, Sri Lanka
                   </p>
@@ -101,7 +108,7 @@ export function Footer() {
                       icon={"schedule"}
                       fill
                     />
-                    <p>Always open</p>
+                    <p className="text-white">Always open</p>
                   </div>
                 </div>
                 <div className="space-y-4">

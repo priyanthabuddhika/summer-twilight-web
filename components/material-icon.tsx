@@ -7,6 +7,7 @@ export type MtIcon =
   | "menu"
   | "west"
   | "east"
+  | "check"
 
 /**
  * Reusable React component that displays Material icons.

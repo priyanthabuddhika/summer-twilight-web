@@ -1,29 +1,16 @@
+import ImageHeader from "@/components/img-header"
 import MaterialIcon from "@/components/material-icon"
+
 import { ContactUsForm } from "./(components)/contact-us-form"
 
 export default function ContactUsPage() {
   return (
     <div>
-      <section>
-        <div className="relative h-screen max-h-[480px]">
-          <div
-            className="absolute inset-0 z-0 bg-cover bg-center "
-            style={{
-              backgroundImage: 'url("images/home/contact-us.webp")',
-              filter: "blur(6px)",
-            }}
-          />
-          <div className="z-1 absolute left-0 top-0 h-full  w-full bg-primary opacity-40"></div>
-          <div className="relative z-10 flex h-[480px] flex-col items-center justify-center">
-            <h1 className="mb-4 font-dmserif text-5xl font-medium text-white">
-              Contact Us
-            </h1>
-            <h2 className="text-lg font-light text-white">
-              Feel free to contact us for any inquiries.
-            </h2>
-          </div>
-        </div>
-      </section>
+      <ImageHeader
+        img="images/home/contact-us.webp"
+        title=" Contact Us"
+        subtitle=" Feel free to contact us for any inquiries."
+      />
       <section className="py-8 md:py-12 lg:py-16">
         <div className="container mb-11">
           <div className="mx-12">
@@ -38,7 +25,12 @@ export default function ContactUsPage() {
                     icon={"mail"}
                     fill
                   />
-                  <p>info@summertwilight.lk</p>
+                  <a
+                    className="text-muted-foreground"
+                    href="mailto:info@summertwilight.lk"
+                  >
+                    info@summertwilight.lk
+                  </a>
                 </div>
                 <div className="flex gap-2 max-sm:justify-center">
                   <MaterialIcon
@@ -46,7 +38,9 @@ export default function ContactUsPage() {
                     icon={"call"}
                     fill
                   />
-                  <p>info@summertwilight.lk</p>
+                  <a className="text-muted-foreground" href="tel:+94714372763">
+                    0714372763
+                  </a>
                 </div>
                 <div className="flex gap-2 max-sm:items-center max-sm:justify-center sm:items-start">
                   <MaterialIcon
@@ -62,12 +56,13 @@ export default function ContactUsPage() {
               </div>
               <div className="col-span-2">
                 <p>
-                  We&apos;re not just photographers, we&apos;re memory makers. Our passion
-                  is to create timeless images that capture the essence of your
-                  love and the beauty of your relationship. We&apos;re committed to
-                  creating beautiful, high-quality photos that showcase the true
-                  magic of your special day. Let us help you tell your love
-                  story and create memories that will last a lifetime.
+                  We&apos;re not just photographers, we&apos;re memory makers.
+                  Our passion is to create timeless images that capture the
+                  essence of your love and the beauty of your relationship.
+                  We&apos;re committed to creating beautiful, high-quality
+                  photos that showcase the true magic of your special day. Let
+                  us help you tell your love story and create memories that will
+                  last a lifetime.
                 </p>
               </div>
             </div>
@@ -85,10 +80,12 @@ export default function ContactUsPage() {
       </section>
       <section className="bg-secondary py-8 md:py-12 lg:py-16">
         <div className="container">
-        <h1 className="mb-5 text-center text-4xl font-normal tracking-tight">Get in Touch</h1>
-        <ContactUsForm />
+          <h1 className="mb-5 text-center text-4xl font-normal tracking-tight">
+            Get in Touch
+          </h1>
+          <ContactUsForm />
         </div>
-        </section>
+      </section>
     </div>
   )
 }

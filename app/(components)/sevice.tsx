@@ -116,7 +116,9 @@ const Services = () => {
                     >
                       {item.title}
                     </h2>
-                    <p className="mt-2">{item.description}</p>
+                    <p className={cn("mt-2", index === 2 ? "text-white" : "")}>
+                      {item.description}
+                    </p>
                   </div>
                 )
               })}
