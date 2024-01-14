@@ -72,7 +72,7 @@ export default function ServicesPage() {
       <ImageHeader
         img="images/home/contact-us.webp"
         title="Our Services"
-        subtitle="With an artistic eye for compelling scenes, our team creates images that vividly capture the memorable moments of your special event.."
+        subtitle="With an artistic eye for compelling scenes, our team creates images that vividly capture the memorable moments of your special event."
       />
       <div className="container space-y-8 py-8 md:py-12 lg:py-24">
         <img
