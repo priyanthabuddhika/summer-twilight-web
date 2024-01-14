@@ -74,7 +74,7 @@ export default function ServicesPage() {
         title="Our Services"
         subtitle="With an artistic eye for compelling scenes, our team creates images that vividly capture the memorable moments of your special event.."
       />
-      <div className="container py-8 md:py-12 lg:py-24 space-y-8">
+      <div className="container space-y-8 py-8 md:py-12 lg:py-24">
         <img
           className="t-right mx-auto"
           src="/images/services/weddings.svg"
@@ -91,14 +91,14 @@ export default function ServicesPage() {
           as unique as your love.
         </p>
         <p className="text-base font-semibold leading-7">Wedding Packages</p>
-        <div className="grid lg:grid-cols-3 max-lg:space-y-8">
+        <div className="grid max-lg:space-y-8 lg:grid-cols-3">
           {data.map((item, index) => (
             <div
               key={item.name}
               className={cn(
-                "md:p-10 space-y-6 text-left py-10 lg:py-0",
+                "space-y-6 py-10 text-left md:p-10 lg:py-0",
                 index === 1
-                  ? "max-lg:border-y-2 lg:border-x-2 border-gray-100 "
+                  ? "border-gray-100 max-lg:border-y-2 lg:border-x-2 "
                   : ""
               )}
             >
@@ -136,8 +136,8 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                  <div className="rounded-lg h-full bg-secondary py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+                <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:shrink-0">
+                  <div className="h-full rounded-lg bg-secondary py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
                     <div className="mx-auto max-w-xs px-8">
                       <h1 className=" text-2xl ">{jadeite.name}</h1>
                       <p className="mt-6 flex items-baseline justify-center gap-x-2">

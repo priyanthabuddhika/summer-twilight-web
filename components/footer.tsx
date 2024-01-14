@@ -52,7 +52,7 @@ export function Footer() {
                 src="/images/footer/logo.svg"
                 alt="logo"
               />
-              <p className="font-normal md:text-left text-white">
+              <p className="font-normal text-white md:text-left">
                 If you would like to say hello or ask a general question, please
                 get in touch.
               </p>
@@ -91,7 +91,7 @@ export function Footer() {
                     icon={"location_on"}
                     fill
                   />
-                  <p className="sm:text-left text-white">
+                  <p className="text-white sm:text-left">
                     44/5 Pitawella Road, Malani Bulathsinghala Mawatha,
                     Boralesgamuwa 10290 Colombo, Sri Lanka
                   </p>

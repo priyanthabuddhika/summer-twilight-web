@@ -20,7 +20,7 @@ const ImageHeader = (props: Props) => {
           <h1 className=" font-dmserif text-5xl font-medium text-white">
             {props.title}
           </h1>
-          <h2 className=" text-base text-white font-dmsans">{props.subtitle}</h2>
+          <h2 className=" font-dmsans text-base text-white">{props.subtitle}</h2>
         </div>
       </div>
     </section>
