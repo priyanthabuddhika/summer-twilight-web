@@ -8,7 +8,7 @@ export default function AboutUsPage() {
         title="About Us"
         subtitle="Feel free to contact us for any inquiries."
       />
-      <div className="container lg:flex gap-10 py-8 md:py-12 lg:py-24">
+      <div className="container gap-10 py-8 md:py-12 lg:flex lg:py-24">
         <div className="space-y-8 lg:w-2/3">
           <h1 className="scroll-m-20 text-4xl font-normal tracking-tight ">
             Our Story
