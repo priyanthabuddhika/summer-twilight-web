@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 
 import { NavItem } from "@/types/nav"
 import { cn } from "@/lib/utils"
@@ -16,6 +16,8 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   const pathname = usePathname()
+  const router = useRouter()
+
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
 
   return (
@@ -50,6 +52,7 @@ export function MainNav({ items }: MainNavProps) {
         className="hidden max-md:ml-auto md:block"
         variant="header"
         size="lgr"
+        onClick={() => router.push("/request-a-quote")}
       >
         Request a quote
       </Button>

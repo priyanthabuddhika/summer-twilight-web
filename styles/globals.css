@@ -125,5 +125,8 @@
     p {
       @apply text-muted-foreground;
     }
+    label {
+      @apply text-muted-foreground;
+    }
   }
 }
