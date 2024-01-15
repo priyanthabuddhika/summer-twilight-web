@@ -70,7 +70,7 @@ export default function ServicesPage() {
   return (
     <div className="text-center">
       <ImageHeader
-        img="images/home/contact-us.webp"
+        img="images/services/services.webp"
         title="Our Services"
         subtitle="With an artistic eye for compelling scenes, our team creates images that vividly capture the memorable moments of your special event."
       />

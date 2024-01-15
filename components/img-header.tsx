@@ -9,7 +9,7 @@ const ImageHeader = (props: Props) => {
     <section>
       <div className="relative h-screen max-h-[480px]">
         <div
-          className="absolute inset-0 z-0 bg-cover bg-center "
+          className="absolute inset-0 -inset-x-5 z-0 bg-cover bg-center "
           style={{
             backgroundImage: `url("${props.img}")`,
             filter: "blur(6px)",

@@ -4,7 +4,7 @@ export default function AboutUsPage() {
   return (
     <div>
       <ImageHeader
-        img="images/home/contact-us.webp"
+        img="images/about-us/about-us.webp"
         title="About Us"
         subtitle="Feel free to contact us for any inquiries."
       />
