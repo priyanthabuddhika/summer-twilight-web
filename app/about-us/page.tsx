@@ -15,7 +15,7 @@ export default function AboutUsPage() {
           </h1>
           <p className="text-base font-normal leading-7">
             Summer Twilight was founded in 2019 by two passionate photographers,
-            [Your Name] and [Your Partner's Name]. We met while studying
+            [Your Name] and partner. We met while studying
             photography at the University of Colombo, and we quickly bonded over
             our shared love of weddings. We believe that every wedding is a
             unique story that deserves to be told in a beautiful and timeless
