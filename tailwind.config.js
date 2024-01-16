@@ -59,6 +59,9 @@ module.exports = {
           DEFAULT: "hsl(var(--header))",
           foreground: "hsl(var(--header-foreground))",
           border: "hsl(var(--header-border))"
+        },
+        footer: {
+          DEFAULT: "hsl(var(--footer))"
         }
       },
       borderRadius: {
@@ -80,6 +83,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backdropBlur: {
+        sm : '6.5px'
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

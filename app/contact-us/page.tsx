@@ -78,7 +78,7 @@ export default function ContactUsPage() {
           ></iframe>
         </div>
       </section>
-      <section className="bg-secondary py-8 md:py-12 lg:py-16">
+      <section className="bg-foreground py-8 md:py-12 lg:py-16">
         <div className="container">
           <h1 className="mb-5 text-center text-4xl font-normal tracking-tight">
             Get in Touch

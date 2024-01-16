@@ -82,12 +82,11 @@ const Testimonials = () => {
           </h1>
           <div
             className={
-              "h-full w-full bg-[url('" +
-              testimonials[currentIndex].bgImg +
-              "')] bg-fixed bg-center"
+             cn("h-full w-full bg-fixed bg-center")
             }
+            style={{backgroundImage: "url(" + testimonials[currentIndex].bgImg +")" }}
           >
-            <div className="bg-secondary">
+            <div className="bg-foreground">
               <div className="container md:flex">
                 <div className="md:w-1/2">
                   <img

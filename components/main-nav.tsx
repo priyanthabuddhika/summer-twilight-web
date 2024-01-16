@@ -54,7 +54,7 @@ export function MainNav({ items }: MainNavProps) {
         size="lgr"
         onClick={() => router.push("/request-a-quote")}
       >
-        Request a quote
+        Request a Quote
       </Button>
       <button
         className="ml-auto flex items-center space-x-2 md:hidden"

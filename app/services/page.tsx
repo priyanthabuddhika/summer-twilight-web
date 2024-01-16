@@ -137,7 +137,7 @@ export default function ServicesPage() {
                   </ul>
                 </div>
                 <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:shrink-0">
-                  <div className="h-full rounded-lg bg-secondary py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+                  <div className="h-full rounded-lg bg-foreground py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
                     <div className="mx-auto max-w-xs px-8">
                       <h1 className=" text-2xl ">{jadeite.name}</h1>
                       <p className="mt-6 flex items-baseline justify-center gap-x-2">
