@@ -14,7 +14,7 @@ export default function RequestAQuotePage() {
           Reserve your big day with us! <br />
           Please complete this simple form and we will contact you as soon as possible.
         </p>
-        <div className="mx-auto md:w-8/12">
+        <div className="mx-auto md:w-10/12">
         <QuoteForm />
         </div>   
       </div>

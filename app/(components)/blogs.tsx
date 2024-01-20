@@ -28,10 +28,10 @@ const Blogs = () => {
         Our insights and inputs for your special day
       </p>
       <div className="max-md:space-y-5 md:grid md:grid-cols-2 md:gap-5 lg:grid-cols-2  ">
-        {blogData.map((data, index) => {
+        {blogData.map((data) => {
           return (
-            <div className="rounded-xl bg-[#F6F6F6]">
-              <div key={index} className="blog-img relative overflow-hidden ">
+            <div key={data.title} className="rounded-xl bg-[#F6F6F6]">
+              <div className="blog-img relative overflow-hidden ">
                 <img
                   className="max-h-[300px] w-full cursor-pointer rounded-md object-cover transition duration-500 hover:scale-110"
                   src={data.img}
@@ -45,17 +45,16 @@ const Blogs = () => {
                   <p className="text-left text-sm text-[#7C7C7C]">
                     {data.description}
                   </p>
-                  <div className="mt-5  flex">
+                  <div className="mt-5  flex transition-transform duration-300 ease-in-out hover:translate-x-[5px]">
                     <Link
                       href={""}
-                      className="mr-2 mt-1 inline-block cursor-pointer text-base font-normal leading-none tracking-widest text-primary hover:border-b-2"
+                      className="mr-2 mt-1 cursor-pointer text-base font-normal leading-none text-primary "
                     >
                       Read More
                     </Link>
                     <MaterialIcon
                       icon="east"
-                      color="#1C1B1F"
-                      className="cursor-pointer"
+                      className="cursor-pointer text-primary "
                     />
                   </div>
                 </div>
