@@ -77,7 +77,7 @@ const Services = () => {
     <div ref={main}>
       <section
         id="services"
-        className="h-full w-full bg-[url('/images/home/services/bg.webp')] bg-fixed bg-center"
+        className="size-full bg-[url('/images/home/services/bg.webp')] bg-fixed bg-center"
       >
         <div className="bg-foreground py-8 md:py-12 lg:py-24 ">
           <div className="container space-y-8 overflow-x-hidden text-center">

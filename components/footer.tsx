@@ -39,7 +39,7 @@ export function Footer() {
     <div ref={main}>
       <section
         id="footer"
-        className="h-full w-full bg-[url('/images/footer/bg.webp')] bg-center"
+        className="size-full bg-[url('/images/footer/bg.webp')] bg-center"
       >
         <div className="inset-0 bg-footer  py-12 backdrop-blur-sm lg:py-20">
           <div

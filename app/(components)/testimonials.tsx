@@ -82,7 +82,7 @@ const Testimonials = () => {
           </h1>
           <div
             className={
-             cn("h-full w-full bg-fixed bg-center")
+             cn("size-full bg-fixed bg-center")
             }
             style={{backgroundImage: "url(" + testimonials[currentIndex].bgImg +")" }}
           >
