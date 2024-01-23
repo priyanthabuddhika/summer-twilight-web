@@ -33,13 +33,13 @@ const Blogs = () => {
             <div key={data.title} className="rounded-xl bg-[#F6F6F6]">
               <div className="blog-img relative overflow-hidden ">
                 <img
-                  className="max-h-[300px] w-full cursor-pointer rounded-md object-cover transition duration-500 hover:scale-110"
+                  className="max-h-[300px] w-full cursor-pointer rounded-md object-cover"
                   src={data.img}
                   alt={data.title}
                   loading="lazy"
                 />
                 <div className="p-5 text-left">
-                  <h4 className="mb-1 text-left font-dmserif text-2xl text-[#60526B]">
+                  <h4 className="mb-1 text-left font-dmserif text-2xl text-primary">
                     {data.title}
                   </h4>
                   <p className="text-left text-sm text-[#7C7C7C]">
